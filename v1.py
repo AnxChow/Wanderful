@@ -8,8 +8,7 @@ import re
 # import time
 
 # Replace with your actual Google Maps API key
-API_KEY = "AIzaSyBcilBwODseaHa5qPcQMOEXubhA90ujJBs"
-testing = 1 #so that I don't have to type inputs everytime
+testing = 0 #so that I don't have to type inputs everytime
 # Initialize the Hugging Face summarization model
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 classifier = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
