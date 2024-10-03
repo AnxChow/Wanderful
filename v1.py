@@ -6,9 +6,14 @@ import re
 # from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 # import time
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load environment variables from the .env file
 
 # Replace with your actual Google Maps API key
-testing = 0 #so that I don't have to type inputs everytime
+API_KEY = os.getenv("API_KEY")
+testing = 1 #so that I don't have to type inputs everytime
 # Initialize the Hugging Face summarization model
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 classifier = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
